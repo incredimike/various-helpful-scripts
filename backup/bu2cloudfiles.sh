@@ -82,7 +82,7 @@ if [ $1 = "restore" ]; then
 
   TODAYSRESTOREDIR=$RESTOREDIR/$TODAY
   if [ ! -d $TODAYSRESTOREDIR ]; then
-    echo "mkdir -p $TODAYSRESTOREDIR"
+    mkdir -p $TODAYSRESTOREDIR
   fi
   duplicity ${DUP_VERBOSE} cf+http://${CLOUDFILES_CONTAINER} ${TODAYSRESTOREDIR}
 
